@@ -1,0 +1,16 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "module": "esnext",
+    "types": ["node", "jest"]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "preserveWhitespaces": false,
+    "strictInjectionParameters": true,
+    "enableIvy": false,
+    "disableTypeScriptVersionCheck": true
+  },
+  "exclude": ["src/testing.ts", "**/*.spec.ts"]
+}

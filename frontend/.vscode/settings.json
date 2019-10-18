@@ -1,0 +1,30 @@
+{
+  "codemetrics.basics.DecorationModeEnabled": false,
+  "codemetrics.nodeconfiguration.AnyKeyword": 0,
+  "editor.formatOnSave": true,
+
+  "html.format.endWithNewline": true,
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 100,
+  "html.suggest.angular1": false,
+
+  "jest.autoEnable": false,
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "dist": true,
+    "documentation": true,
+    "report": true
+  },
+
+  "typescript.extension.sortImports.sortMethod": "path",
+  "typescript.extension.sortImports.sortOnSave": true,
+  "typescript.extension.sortImports.pathSortOrder": [
+    "package",
+    "relativeDownLevel",
+    "relativeUpLevel"
+  ],
+  "typescript.locale": "en",
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`project list actions FetchProjectsList builds the correct API request action 1`] = `
+FetchProjectsList {
+  "payload": Object {
+    "cancel": undefined,
+    "handlers": "[Projects List] Fetch",
+    "normalizrSchema": ArraySchema {
+      "schema": EntitySchema {
+        "_getId": [Function],
+        "_idAttribute": [Function],
+        "_key": "projects",
+        "_mergeStrategy": [Function],
+        "_processStrategy": [Function],
+        "schema": Object {},
+      },
+    },
+    "rawDataProcessor": undefined,
+    "request": Object {
+      "method": "GET",
+      "url": "projects",
+    },
+  },
+  "type": "[ApiRequest] Execute API Request",
+}
+`;

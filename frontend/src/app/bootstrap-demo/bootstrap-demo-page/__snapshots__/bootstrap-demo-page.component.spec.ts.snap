@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BootstrapDemoPageComponent renders the the tabs 1`] = `
+<ul
+  class="nav nav-tabs justify-content-start"
+  role="tablist"
+>
+  
+  <li
+    class="nav-item"
+  >
+    <a
+      aria-controls="ngb-tab-3-panel"
+      aria-disabled="false"
+      aria-expanded="true"
+      class="nav-link active"
+      href=""
+      id="ngb-tab-3"
+      role="tab"
+    >
+       Datepicker
+      
+    </a>
+  </li>
+  <li
+    class="nav-item"
+  >
+    <a
+      aria-disabled="false"
+      aria-expanded="false"
+      class="nav-link"
+      href=""
+      id="ngb-tab-4"
+      role="tab"
+    >
+       
+      
+      <b>
+        Just
+      </b>
+       Text
+    </a>
+  </li>
+  <li
+    class="nav-item"
+  >
+    <a
+      aria-disabled="true"
+      aria-expanded="false"
+      class="nav-link disabled"
+      href=""
+      id="ngb-tab-5"
+      role="tab"
+      tabindex="-1"
+    >
+       Disabled
+      
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`BootstrapDemoPageComponent should create 1`] = `BootstrapDemoPageComponent {}`;

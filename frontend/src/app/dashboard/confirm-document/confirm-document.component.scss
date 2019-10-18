@@ -1,0 +1,22 @@
+@import '../../../styles/common/variables';
+
+.body {
+  .col-6:nth-child(odd) {
+    font-weight: bold;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  label, .label {
+    display: block;
+    font-weight: bold;
+    margin: 0.5 * $default-margin 0;
+  }
+  input {
+    display: block;
+    margin-bottom: 0.5 * $default-margin;
+  }
+  #paypal-button-container {
+    text-align: right;
+  }
+}

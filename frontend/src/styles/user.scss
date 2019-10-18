@@ -1,0 +1,35 @@
+@mixin user-form {
+  @include box;
+  width: 30vw;
+  min-width: 40rem;
+  margin: auto;
+  padding: $default-margin;
+  h3 {
+    text-align: center;
+    padding-bottom: $default-margin;
+    margin-bottom: $default-margin;
+    border-bottom: 1px solid $border-color;
+  }
+  .form-group,
+  .buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  label {
+    display: inline-block;
+    width: 25%;
+    margin: 0;
+  }
+  input {
+    width: 75%;
+  }
+  .buttons {
+    margin-top: $default-margin;
+    justify-content: space-between;
+    button {
+      min-width: 0;
+      width: 30%;
+    }
+  }
+}

@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`current document actions CreateCurrentDocument builds the correct API request action 1`] = `
+CreateCurrentDocument {
+  "payload": Object {
+    "cancel": undefined,
+    "handlers": "[Current Document] Create",
+    "normalizrSchema": EntitySchema {
+      "_getId": [Function],
+      "_idAttribute": [Function],
+      "_key": "documents",
+      "_mergeStrategy": [Function],
+      "_processStrategy": [Function],
+      "schema": Object {
+        "links": Array [
+          EntitySchema {
+            "_getId": [Function],
+            "_idAttribute": "id",
+            "_key": "documents",
+            "_mergeStrategy": [Function],
+            "_processStrategy": [Function],
+            "schema": Object {},
+          },
+        ],
+        "project": EntitySchema {
+          "_getId": [Function],
+          "_idAttribute": [Function],
+          "_key": "projects",
+          "_mergeStrategy": [Function],
+          "_processStrategy": [Function],
+          "schema": Object {},
+        },
+      },
+    },
+    "rawDataProcessor": undefined,
+    "request": Object {
+      "method": "POST",
+      "options": Object {
+        "body": Object {
+          "address": "",
+          "createdAt": "",
+          "description": "",
+          "hash": "",
+          "id": "",
+          "kind": "data",
+          "linkIds": Array [],
+          "links": Array [],
+          "project": null,
+          "projectId": 0,
+          "state": "in_progress",
+          "stateDetails": "",
+        },
+      },
+      "url": "documents",
+    },
+  },
+  "type": "[ApiRequest] Execute API Request",
+}
+`;
+
+exports[`current document actions DeleteCurrentDocument builds the correct API request action 1`] = `
+DeleteCurrentDocument {
+  "payload": Object {
+    "cancel": undefined,
+    "handlers": "[Current Document] Delete",
+    "normalizrSchema": undefined,
+    "rawDataProcessor": undefined,
+    "request": Object {
+      "method": "DELETE",
+      "options": Object {
+        "body": Object {
+          "address": "",
+          "createdAt": "",
+          "description": "",
+          "hash": "",
+          "id": "12",
+          "kind": "data",
+          "linkIds": Array [],
+          "links": Array [],
+          "project": null,
+          "projectId": 0,
+          "state": "in_progress",
+          "stateDetails": "",
+        },
+      },
+      "url": "documents/12",
+    },
+  },
+  "type": "[ApiRequest] Execute API Request",
+}
+`;
+
+exports[`current document actions FetchCurrentDocument builds the correct API request action 1`] = `
+FetchCurrentDocument {
+  "payload": Object {
+    "cancel": undefined,
+    "handlers": "[Current Document] Fetch",
+    "normalizrSchema": EntitySchema {
+      "_getId": [Function],
+      "_idAttribute": [Function],
+      "_key": "documents",
+      "_mergeStrategy": [Function],
+      "_processStrategy": [Function],
+      "schema": Object {
+        "links": Array [
+          EntitySchema {
+            "_getId": [Function],
+            "_idAttribute": "id",
+            "_key": "documents",
+            "_mergeStrategy": [Function],
+            "_processStrategy": [Function],
+            "schema": Object {},
+          },
+        ],
+        "project": EntitySchema {
+          "_getId": [Function],
+          "_idAttribute": [Function],
+          "_key": "projects",
+          "_mergeStrategy": [Function],
+          "_processStrategy": [Function],
+          "schema": Object {},
+        },
+      },
+    },
+    "rawDataProcessor": undefined,
+    "request": Object {
+      "method": "GET",
+      "url": "documents/12",
+    },
+  },
+  "type": "[ApiRequest] Execute API Request",
+}
+`;
+
+exports[`current document actions ResetCurrentDocument builds the correct API request action 1`] = `
+ResetCurrentDocument {
+  "type": "[Current Document] Fetch RESET",
+}
+`;
+
+exports[`current document actions UpdateCurrentDocument builds the correct API request action 1`] = `
+UpdateCurrentDocument {
+  "payload": Object {
+    "cancel": undefined,
+    "handlers": "[Current Document] Update",
+    "normalizrSchema": EntitySchema {
+      "_getId": [Function],
+      "_idAttribute": [Function],
+      "_key": "documents",
+      "_mergeStrategy": [Function],
+      "_processStrategy": [Function],
+      "schema": Object {
+        "links": Array [
+          EntitySchema {
+            "_getId": [Function],
+            "_idAttribute": "id",
+            "_key": "documents",
+            "_mergeStrategy": [Function],
+            "_processStrategy": [Function],
+            "schema": Object {},
+          },
+        ],
+        "project": EntitySchema {
+          "_getId": [Function],
+          "_idAttribute": [Function],
+          "_key": "projects",
+          "_mergeStrategy": [Function],
+          "_processStrategy": [Function],
+          "schema": Object {},
+        },
+      },
+    },
+    "rawDataProcessor": undefined,
+    "request": Object {
+      "method": "PUT",
+      "options": Object {
+        "body": Object {
+          "address": "",
+          "createdAt": "",
+          "description": "",
+          "hash": "",
+          "id": "",
+          "kind": "data",
+          "linkIds": Array [],
+          "links": Array [],
+          "project": null,
+          "projectId": 0,
+          "state": "in_progress",
+          "stateDetails": "",
+        },
+      },
+      "url": "documents/",
+    },
+  },
+  "type": "[ApiRequest] Execute API Request",
+}
+`;

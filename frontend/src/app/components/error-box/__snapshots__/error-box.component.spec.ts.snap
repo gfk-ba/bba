@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoxComponent testing the template output renders the empty error box component 1`] = `
+<dcs-error-box>
+  
+</dcs-error-box>
+`;
+
+exports[`ErrorBoxComponent testing the template output renders the error if present 1`] = `
+<dcs-error-box
+  ng-reflect-error="[object Object]"
+>
+  
+  <div
+    class="row"
+  >
+    <div
+      class="col-12"
+    >
+      <div
+        class="error-box box"
+      >
+        <div
+          class="box-title"
+        >
+          Error
+        </div>
+        <p>
+          Status: 403
+        </p>
+        <p>
+          Message: Keep out!
+        </p>
+      </div>
+    </div>
+  </div>
+</dcs-error-box>
+`;

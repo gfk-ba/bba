@@ -1,0 +1,17 @@
+<ng-template>
+  <div class="modal-container">
+    <div class="modal-head">
+      <h3>{{ title }}</h3>
+      <span (click)="hide()" class="fa fa-times"></span>
+    </div>
+
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+
+    <div class="modal-footer">
+      <ng-content select=".footer"></ng-content>
+    </div>
+  </div>
+
+</ng-template>

@@ -1,0 +1,4 @@
+FROM postgres:9.5
+ENV POSTGRES_DB postgres
+COPY ./Config/Database/gfk-bba-db-model.sql /docker-entrypoint-initdb.d/
+EXPOSE 5432

@@ -1,0 +1,63 @@
+@import '../../../styles/common/mixins';
+@import '../../../styles/common/variables';
+
+header {
+  @include box-shadow;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  .flex-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    ul:last-child {
+      flex-grow: 1;
+    }
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0.5 * $default-margin 0;
+  }
+  ul:first-child {
+    justify-content: flex-start;
+    li a {
+      padding-left: 0;
+    }
+    img {
+      display: block;
+      height: 60px;
+    }
+    h5 {
+      margin: 0 0 0 $default-margin;
+      font-weight: bold;
+    }
+  }
+  li {
+    a,
+    span {
+      @include default-transition;
+      display: block;
+      margin-left: 1rem;
+      &.active {
+        &,
+        &:hover {
+          color: $text-color !important;
+        }
+      }
+      &,
+      &:visited {
+        color: $text-color-lighter;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $blue;
+      }
+    }
+  }
+}

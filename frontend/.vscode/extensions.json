@@ -1,0 +1,27 @@
+{
+  "recommendations": [
+    "Angular.ng-template",
+    "CoenraadS.bracket-pair-colorizer",
+    "DavidAnson.vscode-markdownlint",
+    "EditorConfig.editorconfig",
+    "GregorBiswanger.json2ts",
+    "Orta.vscode-jest",
+    "Zignd.html-css-class-completion",
+    "andys8.jest-snippets",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "eamodio.gitlens",
+    "eg2.tslint",
+    "esbenp.prettier-vscode",
+    "kisstkondoros.vscode-codemetrics",
+    "miclo.sort-typescript-imports",
+    "mikael.angular-beastcode",
+    "ms-ceintl.vscode-language-pack-de",
+    "msjsdiag.debugger-for-chrome",
+    "natewallace.angular2-inline",
+    "robinbentley.sass-indented",
+    "thekalinga.bootstrap4-vscode",
+    "wayou.vscode-todo-highlight",
+    "xabikos.javascriptsnippets"
+  ]
+}

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Reducer Greet puts the payload into greeting 1`] = `
+Object {
+  "greeting": "Me",
+}
+`;
+
+exports[`Home Reducer GreetUniverse puts Universe into greeting 1`] = `
+Object {
+  "greeting": "Universe",
+}
+`;
+
+exports[`Home Reducer GreetWorld puts World into greeting 1`] = `
+Object {
+  "greeting": "World",
+}
+`;

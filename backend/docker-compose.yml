@@ -1,0 +1,16 @@
+# This docker-compose can be used to deploy a version straight
+# from the docker images (which contain dummy accounts only)
+version: '3.3'
+services:
+  app:
+    image: dcsfuerth/gfk-bba:1.0.2
+    depends_on:
+      - database
+    ports:
+      - '80:3001'
+  database:
+    image: dcsfuerth/gfk-bba-db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:

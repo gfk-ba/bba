@@ -1,0 +1,35 @@
+<header>
+  <nav class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="flex-wrapper">
+          <ul>
+            <li>
+              <a routerLink="/dashboard" title="Home">
+                <img src="../../../assets/images/gfk-logo.svg" />
+              </a>
+            </li>
+            <li>
+              <h5>GfK Blockchain-backed analytics</h5>
+            </li>
+          </ul>
+          <ul *ngIf="isLoggedIn">
+            <li>
+              <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+            </li>
+
+            <li>
+              <span (click)="logout()">logout</span>
+            </li>
+          </ul>
+
+          <ul *ngIf="!isLoggedIn">
+            <li>
+              <a (click)="login()">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

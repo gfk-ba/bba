@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddProjectComponent form creates the form 1`] = `
+Object {
+  "description": "",
+  "name": "",
+}
+`;
+
+exports[`AddProjectComponent submitting the form if valid calls the submitForm EventEmitter 1`] = `
+Object {
+  "description": "testdescription",
+  "name": "testname",
+}
+`;

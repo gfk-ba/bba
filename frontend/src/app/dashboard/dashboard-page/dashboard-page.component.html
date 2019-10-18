@@ -1,0 +1,19 @@
+<dcs-documents-grid [documents]="documents" [kindOptions]="kindOptions" [filter]="filter"
+  (filterChanged)="filterChanged($event)" (filterReset)="filterReset()" (modalOpen)="updatePolling($event)"></dcs-documents-grid>
+
+<dcs-document-register [documents]="documents" [projects]="projects" [kindOptions]="kindOptions"
+  (registerDocument)="registerDocument($event)" (doCreateProject)="createProject($event)"></dcs-document-register>
+
+
+<dcs-modal #processingModal title="Processing">
+
+  <p>Right now your component is being transmitted to the etherium blockchain.</p>
+
+  <p>It can take a few minutes until it will be visible. </p>
+
+  <p>Thank you for using GfK BBA!</p>
+
+  <div class="footer">
+    <button type="button" (click)="processingModal.hide()">OK</button>
+  </div>
+</dcs-modal>

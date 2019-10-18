@@ -1,0 +1,156 @@
+// common/general.scss
+
+html {
+  font-size: $font-size;
+}
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-top: $header-height;
+  background-color: $gray-lightest;
+  font-family: $default-font;
+  font-weight: $default-font-weight;
+  color: $text-color;
+  line-height: $line-height;
+}
+
+#main {
+  min-height: calc(100vh - #{$footer-height} - #{$header-height});
+  padding-top: $default-margin;
+  padding-bottom: $default-margin;
+  position: relative;
+}
+
+footer {
+  background-color: white;
+  border-top: 1px solid $border-color;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+* {
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Insight';
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  &,
+  &:visited {
+    color: $blue;
+  }
+  &:active,
+  &:hover {
+    text-decoration: none;
+    color: $blue-dark;
+  }
+}
+
+input[type='submit'],
+button,
+.btn {
+  &.btn-default {
+    @include btn;
+  }
+  &.btn-white {
+    @include btn;
+    @include box-shadow;
+    background-color: white;
+    color: $text-color;
+    border: 1px solid $border-color;
+    &:hover {
+      background-color: $blue;
+      border-color: $blue;
+      color: white;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  thead {
+    th {
+      border-bottom: 2px solid $border-color;
+    }
+  }
+  th,
+  td {
+    text-align: left;
+    vertical-align: middle;
+  }
+  tbody {
+    td {
+      border-bottom: 1px solid $border-color;
+    }
+    tr:last-child td {
+      border-bottom: 0;
+    }
+  }
+  .actions {
+    text-align: right;
+    a {
+      display: inline-block;
+      margin-right: 0.5rem;
+      &,
+      &:visited {
+        color: $blue;
+      }
+      &:hover {
+        color: $blue-light;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.button-container {
+  margin: $default-margin 0;
+  &:last-child,
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.box {
+  @include box;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}

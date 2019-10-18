@@ -1,0 +1,35 @@
+<div>
+  <div class="body row" *ngIf="document">
+    <div class="col-6">Project:</div>
+    <div class="col-6">{{ document.project.name }}</div>
+    <div class="col-6">Type:</div>
+    <div class="col-6">{{ document.kindLabel }}</div>
+    <div class="col-6">Linked to:</div>
+    <div class="col-6">{{ document.linksText }}</div>
+    <div class="col-6">Hash:</div>
+    <div class="col-6">{{ document.hash }}</div>
+    <div class="col-6">Description:</div>
+    <div class="col-6">{{ document.description }}</div>
+    <div class="col-6">Cost:</div>
+    <div class="col-6">{{ 1 | currency:'EUR' }}</div>
+    <div class="col-6"></div>
+  </div>
+
+  <div class="body row">
+    <div class="col-12">
+      <h5 class="body-headline">Payment options</h5>
+    </div>
+    <div class="col-6">
+      <form [formGroup]="form" (submit)="validateCoupon()">
+          <label for="coupon">Pay with Coupon:&nbsp;</label>
+          <input type="text" id="coupon" formControlName="coupon" placeholder="Coupon-ID">
+        <button type="submit" class="btn btn-default">Pay with Coupon</button>
+        <span *ngIf="couponStatus !== 'untested'">{{ couponStatus }}</span>
+      </form>
+    </div>
+    <div class="col-6 text-right">
+      <span class="label">Or pay with:</span>
+      <div id="paypal-button-container"></div>
+    </div>
+  </div>
+</div>

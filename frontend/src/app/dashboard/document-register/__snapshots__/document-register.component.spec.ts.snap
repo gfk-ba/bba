@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DocumentRegisterComponent createComponent resets the form 1`] = `
+Object {
+  "description": null,
+  "hash": null,
+  "kind": null,
+  "linkIds": Array [],
+  "projectId": null,
+}
+`;

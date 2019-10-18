@@ -1,0 +1,38 @@
+// zondicons.scss
+
+@mixin zondicon($name) {
+  .z.z-#{$name}:before {
+    background-image: url('/assets/zondicons/#{$name}.svg');
+  }
+  .z-hover.z-#{$name} {
+    &:before {
+      background-image: url('/assets/zondicons/#{$name}-blue.svg');
+    }
+    &:hover {
+      cursor: pointer;
+      &:before {
+        background-image: url('/assets/zondicons/#{$name}.svg');
+      }
+    }
+  }
+}
+
+.z,
+.z-hover {
+  &:before {
+    display: inline-block;
+    content: '\0020';
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@include zondicon(bolt);
+@include zondicon(chart-bar);
+@include zondicon(checkmark-outline);
+@include zondicon(close);
+@include zondicon(exclamation-outline);
+@include zondicon(information-outline);

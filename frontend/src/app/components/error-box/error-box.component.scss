@@ -1,0 +1,8 @@
+@import '../../../styles/common/variables';
+
+.error-box {
+  border: 2px solid $red;
+  color: $red;
+  margin-top: $default-margin;
+  margin-bottom: $default-margin;
+}

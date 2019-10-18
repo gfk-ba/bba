@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "axel.wallau@dcs-fuerth.de",
+      "hashedPassword": "fooooooo"
+    },
+    {
+      "id": 2,
+      "email": "marc.remolt@dcs-fuerth.de",
+      "hashedPassword": "fooooooo"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Project 1",
+      "description": "Very Importand Project"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Project 2",
+      "description": "Very Importand Project"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "Project 1",
+      "description": "Very Importand Project"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "name": "Project 2",
+      "description": "Very Importand Project"
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "description": "Component 1 of Project 1",
+      "kind": "data",
+      "hash": "12345",
+      "address": "0xa3fb33a771b2e8863d27b155384b46b114455c92e7e199ba57b1be71568f06e8",
+      "linkIds": [],
+      "state": "ok",
+      "stateDetails": "",
+      "createdAt": "2018-08-20T14:28:43.863Z"
+    },
+    {
+      "id": 2,
+      "projectId": 1,
+      "description": "Component 2 of Project 1",
+      "kind": "model",
+      "hash": "12345",
+      "address": "0xa3fb33a771b2e8863d27b155384b46b114455c92e7e199ba57b1be71568f06e8",
+      "linkIds": [],
+      "state": "ok",
+      "stateDetails": "",
+      "createdAt": "2018-08-20T14:28:43.863Z"
+    },
+    {
+      "id": 3,
+      "projectId": 1,
+      "description": "Component 3 of Project 1",
+      "kind": "result",
+      "hash": "12345",
+      "address": "0xa3fb33a771b2e8863d27b155384b46b114455c92e7e199ba57b1be71568f06e8",
+      "linkIds": [1, 2],
+      "state": "ok",
+      "stateDetails": "",
+      "createdAt": "2018-08-20T14:28:43.863Z"
+    },
+    {
+      "id": 4,
+      "projectId": 1,
+      "description": "Component 4 of Project 1",
+      "kind": "data",
+      "hash": "12345",
+      "address": "0xa3fb33a771b2e8863d27b155384b46b114455c92e7e199ba57b1be71568f06e8",
+      "linkIds": [3],
+      "state": "ok",
+      "stateDetails": "",
+      "createdAt": "2018-08-20T14:28:43.863Z"
+    },
+    {
+      "id": 5,
+      "projectId": 2,
+      "description": "Component 1 of Project 2",
+      "kind": "data",
+      "hash": "12345",
+      "address": "0xa3fb33a771b2e8863d27b155384b46b114455c92e7e199ba57b1be71568f06e8",
+      "linkIds": [2, 4],
+      "state": "in_progress",
+      "stateDetails": "",
+      "createdAt": "2018-08-20T14:28:43.863Z"
+    },
+    {
+      "id": 6,
+      "projectId": 2,
+      "description": "Component 2 of Project 2",
+      "kind": "custom",
+      "hash": "12345",
+      "address": "0xa3fb33a771b2e8863d27b155384b46b114455c92e7e199ba57b1be71568f06e8",
+      "linkIds": [1, 3],
+      "state": "error",
+      "stateDetails": "Destruction and total chaos!!!"
+    },
+    {
+      "projectId": "3",
+      "kind": "result",
+      "hash": "0064006600730064006600200064007300660073006400660061007300640066007300640066",
+      "description": "Lorem ipsum...",
+      "linkIds": [2, 4],
+      "id": 7
+    }
+  ]
+}

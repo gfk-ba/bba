@@ -1,0 +1,63 @@
+@import '../../../styles/common/variables';
+@import '../../../styles/common/mixins';
+@import '../../../styles/common/zondicons';
+
+#filtering {
+  input,
+  select {
+    height: $input-height;
+  }
+  .label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .part {
+    padding-right: 1rem;
+  }
+  .part:last-child {
+    padding-right: 0;
+    flex-grow: 1;
+    .flex-wrapper {
+      height: $input-height;
+      align-items: center;
+    }
+  }
+}
+
+.box.documents-grid {
+  max-height: 700px; // ~15 rows
+  overflow-y: auto;
+}
+
+table {
+  font-size: $font-size-smaller;
+  margin-bottom: 0;
+
+  thead th {
+    border-top: 0;
+  }
+
+  .open-modal {
+    color: $blue;
+    &:hover {
+      cursor: pointer;
+      color: $text-color;
+    }
+  }
+
+  .document-hash {
+    max-width: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  td.linkage span {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

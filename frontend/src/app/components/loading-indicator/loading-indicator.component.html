@@ -1,0 +1,6 @@
+<div class="loading-indicator" *ngIf="active" [ngClass]="{'static' : static}">
+  <div class="spinner">
+    <div class="ring"></div>
+  </div>
+  <h5 *ngIf="message" class="message">{{ message }}!</h5>
+</div>

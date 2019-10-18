@@ -1,0 +1,43 @@
+// common/fonts.scss
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fonts/lato-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fonts/lato-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/assets/fonts/lato-thin.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Insight';
+  src: url('/assets/fonts/insight_screen_regular-e-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Insight';
+  src: url('/assets/fonts/insight_screen_bold-e-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Insight light';
+  src: url('/assets/fonts/insightdisplay_screen_light-e-webfont.woff') format('woff');
+  font-weight: light;
+  font-style: italic;
+}

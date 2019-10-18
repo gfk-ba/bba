@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Document with empty props uses default values 1`] = `"{\\"id\\":\\"\\",\\"projectId\\":0,\\"description\\":\\"\\",\\"kind\\":\\"data\\",\\"hash\\":\\"\\",\\"linkIds\\":[],\\"links\\":[],\\"project\\":null,\\"state\\":\\"in_progress\\",\\"stateDetails\\":\\"\\",\\"address\\":\\"\\",\\"createdAt\\":\\"\\"}"`;
+
+exports[`Document with props calculates graph edges 1`] = `
+Array [
+  Object {
+    "from": "42",
+    "to": "12",
+  },
+]
+`;
+
+exports[`Document with props calculates graph nodes 1`] = `
+Array [
+  Object {
+    "id": "42",
+    "label": "#42(Project 1 - Model)",
+  },
+  Object {
+    "id": "12",
+    "label": "#12(Project 1 - Custom)",
+  },
+]
+`;
+
+exports[`Document with props creates Document instances in links 1`] = `
+Array [
+  "{\\"id\\":\\"12\\",\\"projectId\\":5,\\"description\\":\\"Linked description\\",\\"kind\\":\\"custom\\",\\"hash\\":\\"12345\\",\\"linkIds\\":[],\\"links\\":[],\\"project\\":{\\"id\\":\\"5\\",\\"name\\":\\"Project 1\\",\\"description\\":\\"fffff\\",\\"userId\\":12},\\"state\\":\\"ok\\",\\"stateDetails\\":\\"\\",\\"address\\":\\"\\",\\"createdAt\\":\\"\\"}",
+]
+`;
+
+exports[`Document with props creates Project instance in project 1`] = `"{\\"id\\":\\"5\\",\\"userId\\":12,\\"name\\":\\"Project 1\\",\\"description\\":\\"fffff\\"}"`;
+
+exports[`Document with props merges default and given values 1`] = `"{\\"id\\":\\"42\\",\\"projectId\\":5,\\"description\\":\\"The description\\",\\"kind\\":\\"model\\",\\"hash\\":\\"\\",\\"linkIds\\":[12],\\"links\\":[{\\"id\\":\\"12\\",\\"projectId\\":5,\\"project\\":{\\"id\\":\\"5\\",\\"name\\":\\"Project 1\\",\\"description\\":\\"fffff\\",\\"userId\\":12},\\"description\\":\\"Linked description\\",\\"kind\\":\\"custom\\",\\"hash\\":\\"12345\\",\\"linkIds\\":[],\\"links\\":[],\\"state\\":\\"ok\\",\\"stateDetails\\":\\"\\",\\"address\\":\\"\\",\\"createdAt\\":\\"\\"}],\\"project\\":{\\"id\\":\\"5\\",\\"name\\":\\"Project 1\\",\\"description\\":\\"fffff\\",\\"userId\\":12},\\"state\\":\\"ok\\",\\"stateDetails\\":\\"\\",\\"address\\":\\"\\",\\"createdAt\\":\\"\\"}"`;

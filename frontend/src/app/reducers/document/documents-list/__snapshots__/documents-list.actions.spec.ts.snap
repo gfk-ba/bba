@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`document list actions FetchDocumentsList builds the correct API request action 1`] = `
+FetchDocumentsList {
+  "payload": Object {
+    "cancel": undefined,
+    "handlers": "[Documents List] Fetch",
+    "normalizrSchema": ArraySchema {
+      "schema": EntitySchema {
+        "_getId": [Function],
+        "_idAttribute": [Function],
+        "_key": "documents",
+        "_mergeStrategy": [Function],
+        "_processStrategy": [Function],
+        "schema": Object {
+          "links": Array [
+            EntitySchema {
+              "_getId": [Function],
+              "_idAttribute": "id",
+              "_key": "documents",
+              "_mergeStrategy": [Function],
+              "_processStrategy": [Function],
+              "schema": Object {},
+            },
+          ],
+          "project": EntitySchema {
+            "_getId": [Function],
+            "_idAttribute": [Function],
+            "_key": "projects",
+            "_mergeStrategy": [Function],
+            "_processStrategy": [Function],
+            "schema": Object {},
+          },
+        },
+      },
+    },
+    "rawDataProcessor": undefined,
+    "request": Object {
+      "method": "GET",
+      "url": "documents",
+    },
+  },
+  "type": "[ApiRequest] Execute API Request",
+}
+`;

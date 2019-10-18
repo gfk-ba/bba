@@ -1,0 +1,56 @@
+// Bootstrap
+
+// ngSelect
+
+ng-select {
+  .ng-select-container {
+    transition: border 0.2s linear;
+    border-color: $border-color !important;
+    border-radius: 0 !important;
+    background-color: white;
+    font-family: $default-font;
+    font-size: $font-size;
+    color: $text-color;
+  }
+  .ng-value-container {
+    .ng-value {
+      background-color: $gray-lightest !important;
+      border-color: $border-color !important;
+      font-size: $font-size-smaller;
+      .ng-value-icon:hover {
+        background-color: $blue !important;
+        color: white;
+      }
+    }
+  }
+  .ng-dropdown-panel {
+    transition: border 0.2s linear;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border-color: $border-color;
+    .ng-dropdown-panel-items {
+      margin-bottom: 0 !important;
+      .ng-option {
+        font-size: $font-size-smaller !important;
+        &:last-child {
+          border-radius: 0 !important;
+        }
+      }
+    }
+  }
+  .ng-option {
+    &:hover {
+      background-color: $blue !important;
+      .ng-option-label {
+        color: white;
+      }
+    }
+  }
+}
+
+.ng-select-opened {
+  .ng-select-container,
+  .ng-dropdown-panel {
+    border-color: $blue !important;
+  }
+}

@@ -1,0 +1,97 @@
+<form [formGroup]="form">
+  <div id="filtering" class="box">
+    <h5>Filter Data</h5>
+    <div class="flex-wrapper">
+      <div class="part">
+        <span class="label">Project name</span>
+        <input type="search" id="idProjectSearch" placeholder="project search" formControlName="project">
+      </div>
+      <div class="part">
+        <span class="label">Type</span>
+        <select id="idKindSelect" formControlName="kind">
+          <option value="all">All</option>
+          <option *ngFor="let kind of kindOptions" [value]="kind">
+            {{ kind | titlecase }}
+          </option>
+        </select>
+      </div>
+      <div class="part">
+        <span class="label">Component</span>
+        <input type="search" id="idCompSearch" placeholder="comp search" formControlName="component">
+      </div>
+      <div class="part">
+        <span class="label">&nbsp;</span>
+        <div class="flex-wrapper">
+          <span title="Reset filters" (click)="resetFilter()" class="z-hover z-close"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box documents-grid">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Project Name</th>
+          <th>Type</th>
+          <th class="document-hash">Hash</th>
+          <th>TxID (Link)</th>
+          <th>Linkage</th>
+          <th>Graph</th>
+          <th>Info</th>
+          <th>State</th>
+          <th>created at</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let document of documents; trackBy:trackByIdentifier">
+          <td>#{{ document.id }}</td>
+          <td>{{ document.project.name }}</td>
+          <td>{{ document.kindLabel }}</td>
+          <td class="document-hash" [attr.title]="document.hash">{{ document.hash }}</td>
+          <td>
+            <a href="https://rinkeby.etherscan.io/address/{{ document.address }}" target="_blank">
+              {{ document.address | slice:0:10 }}
+            </a>
+            <!-- <a href="https://etherscan.io/tx/{{ document.address }}" target="_blank">
+              {{ document.address | slice:0:10 }}
+            </a> -->
+          </td>
+          <td class="linkage">
+            <span>{{ document.linksText }}</span>
+          </td>
+          <td>
+            <dcs-modal #linkModal title="Linkage graph of document {{ document.project.name }} / {{ document.kindLabel }}"
+              (showTriggered)="graph.fit(); setModalOpen(true)" (hideTriggered)="setModalOpen(false)">
+              <dcs-document-link-graph #graph [document]="document"></dcs-document-link-graph>
+              <div class="footer">
+                <button (click)="linkModal.hide()">Close</button>
+              </div>
+            </dcs-modal>
+            <span (click)="linkModal.show()" class="open-modal"><span class="z-hover z-chart-bar"></span></span>
+          </td>
+          <td>
+            <dcs-modal #detailModal title="Details of the document {{ document.project.name }} / {{ document.kindLabel }}"
+              (showTriggered)="setModalOpen(true)" (hideTriggered)="setModalOpen(false)">
+              <dcs-document-detail [document]="document"></dcs-document-detail>
+              <div class="footer">
+                <button (click)="detailModal.hide()">Close</button>
+              </div>
+            </dcs-modal>
+            <span class="open-modal" (click)="detailModal.show()">
+              <span class="z-hover z-information-outline"></span>
+            </span>
+          </td>
+          <td class="document-state" [attr.title]="document.stateLabel">
+            <dcs-loading-indicator [static]="true" [loading]="document.stateLabel === 'PROGRESS'"></dcs-loading-indicator>
+            <span class="z z-checkmark-outline" *ngIf="document.stateLabel === 'OK'"></span>
+            <span class="z z-bolt" *ngIf="document.stateLabel === 'ERROR'"></span>
+          </td>
+          <td>{{ document.createdAt | date:'yyyy/MM/dd, H:mm' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

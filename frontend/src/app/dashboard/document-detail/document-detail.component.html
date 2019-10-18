@@ -1,0 +1,48 @@
+<table *ngIf="document">
+  <thead>
+  <tr>
+    <th colspan="2">Project:</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Name:</td>
+    <td>{{ document.project.name }}</td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td>{{ document.project.description }}</td>
+  </tr>
+  </tbody>
+  <thead>
+  <tr>
+    <th colspan="2">Document:</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Type:</td>
+    <td>{{ document.kindLabel }}</td>
+  </tr>
+  <tr>
+    <td>Linked to:</td>
+    <td>{{ document.linksText }}</td>
+  </tr>
+  <tr>
+    <td>Hash:</td>
+    <td>{{ document.hash }}</td>
+  </tr>
+  <tr>
+    <td>Description:</td>
+    <td>{{ document.description }}</td>
+  </tr>
+  <tr>
+    <td>State:</td>
+    <td>{{ document.stateLabel }}</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>{{ document.stateDetails }}</td>
+  </tr>
+  </tbody>
+</table>

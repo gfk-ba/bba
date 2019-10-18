@@ -1,0 +1,43 @@
+@import '../../../styles/common/variables';
+@import '../../../styles/common/zondicons';
+
+textarea {
+  margin-top: $default-margin;
+  min-height: 5 * $default-margin;
+  margin-bottom: $default-margin;
+}
+
+.left-part {
+  .flex-wrapper {
+    select {
+      margin-right: 0.5 * $default-margin;
+      flex-grow: 1;
+    }
+    button {
+      min-width: 4rem;
+    }
+  }
+}
+
+.right-part {
+  .flex-wrapper {
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    input.btn {
+      margin-top: auto;
+      margin-left: auto;
+    }
+  }
+  .error-box {
+    .error-message {
+      display: flex;
+      align-items: center;
+      margin: $default-margin 0 0 0;
+      color: $red;
+      .z {
+        margin-right: 0.25em;
+      }
+    }
+  }
+}

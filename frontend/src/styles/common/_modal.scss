@@ -1,0 +1,102 @@
+.cdk-overlay-container {
+  position: fixed;
+  z-index: 1000;
+  .modal-container {
+    @include box-shadow;
+    background-color: white;
+    padding: 1rem;
+  }
+}
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cdk-global-overlay-wrapper {
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  .modal-head {
+    padding: 1em 0;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+    h3 {
+      margin: 0;
+    }
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $text-color-lighter;
+      &:hover {
+        cursor: pointer;
+        color: $text-color;
+      }
+    }
+  }
+
+  .modal-body {
+    table {
+      width: 100%;
+    }
+    th,
+    td, .col-6 {
+      padding: 0.5rem 0.25rem;
+    }
+    tr:nth-child(odd) {
+      td {
+        background-color: $gray-lightest;
+      }
+    }
+    tbody tr:last-child td {
+      padding-bottom: 1rem;
+    }
+    tbody:last-child tr:last-child td {
+      padding-bottom: 0;
+    }
+    .body {
+      margin-bottom: $default-margin;
+    }
+    .body-headline {
+      margin-left: -15px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .modal-footer {
+    border-top: 1px solid $border-color;
+    padding: 1em 0;
+    .footer {
+      padding: 0;
+      button {
+        @include btn;
+      }
+    }
+  }
+
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  opacity: 0.48;
+}
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.cdk-overlay-backdrop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}

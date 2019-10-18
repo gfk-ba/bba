@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-12">
+    <form id="register-form" [formGroup]="form" (submit)="submit($event)">
+      <h3>Register a new account</h3>
+      <div class="form-group">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" formControlName="email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" />
+      </div>
+      <div class="form-group">
+        <label for="password-confirmation">Password (repeat):</label>
+        <input type="password" id="password-confirmation" formControlName="passwordConfirmation" />
+      </div>
+      <div class="buttons">
+        <button type="button" routerLink="/login" class="btn btn-white">Cancel</button>
+        <button class="btn btn-default">Register</button>
+      </div>
+    </form>
+  </div>
+</div>

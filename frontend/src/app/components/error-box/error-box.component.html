@@ -1,0 +1,9 @@
+<div class="row" *ngIf="error">
+  <div class="col-12">
+    <div class="error-box box">
+      <div class="box-title">{{ title }}</div>
+      <p>Status: {{ error.status }}</p>
+      <p>Message: {{ error.message }}</p>
+    </div>
+  </div>
+</div>

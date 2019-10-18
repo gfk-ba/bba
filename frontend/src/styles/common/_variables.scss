@@ -1,0 +1,39 @@
+// common/variables.scss
+
+$fa-font-path: '../../node_modules/font-awesome/fonts';
+
+$default-font: 'Lato', arial, sans-serif;
+$default-font-weight: 400;
+$font-size: 16px;
+$font-size-smaller: 0.8rem;
+$text-color: #252525;
+$text-color-darker: #343a40;
+$text-color-lighter: #96a5b1;
+
+$header-height: 92px;
+$footer-height: 57px;
+
+$input-height: 2.5rem;
+
+$default-margin: 2rem;
+$line-height: 1em;
+$border-radius: 3px;
+$border-color: #ddd;
+$border-color-dark: #858585;
+
+$gray-lightest: #f7f7f7;
+$gray-light: #999999;
+
+$blue-light: #009ee0;
+$blue: #017dc3;
+$blue-dark: #01598b;
+$blue-trans: rgba(0, 129, 183, 0.8);
+
+$orange: #e55a00;
+$red: #e80406;
+$green: #38b44a;
+$yellow: #ffe900;
+
+$button-color: $text-color;
+$button-color-hover: #666;
+$button-color-active: $orange;
